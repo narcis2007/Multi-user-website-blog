@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content%}
+	<h1>Notifications</h1>
+        {% for notification in notifications %}
+            <div id="title">
+                <h2 >{{notification.title}}</h2>
+            </div>
+            <div id="content">
+                <p>{{notification.content}}</p>
+            <a id="link" href="/notifications/view/{{notification.id}}/" >Mark as read</a>
+            </div>
+        {% endfor %}
+{% endblock %}
