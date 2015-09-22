@@ -1,5 +1,3 @@
-# Multi-user-website-blog
-
 Description:
 ------------------------------
 A website made using Python Django Framework, HTML, CSS and Ajax  where users can log in and publish their own articles.
