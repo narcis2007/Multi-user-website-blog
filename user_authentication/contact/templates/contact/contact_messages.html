@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content%}
+	<h1>Contact Messages</h1>
+        {% for contact in contacts %}
+            <div id="title">
+                <h2 ><a id="link" href="/contact/get/{{contact.id}}/">{{contact.title}}</a></h2>
+                <h5 >From: {{contact.email}}</h5>
+            </div>
+            <div id="content">
+
+                <p>{{contact.content|truncatewords:"35"}}
+                {% ifnotequal contact.content article.content|truncatewords:"35" %}
+                    <a id="link" href="/contact/get/{{contact.id}}/"> Read more...</a>
+                {% endifnotequal %}
+                </p>
+            </div>
+        {% endfor %}
+{% endblock %}
